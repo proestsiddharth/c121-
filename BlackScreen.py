@@ -10,9 +10,7 @@ while True:
     print(frame)
     frame = cv2.resize(frame, (640, 480)) 
     image = cv2.resize(image, (640, 480)) 
-  
-  
-    u_black = np.array([104, 153, 70]) 
+     u_black = np.array([104, 153, 70]) 
     l_black = np.array([30, 30, 0]) 
   
     mask = cv2.inRange(frame, l_black, u_black) 
@@ -23,8 +21,7 @@ while True:
   
     cv2.imshow("video", frame)       
     cv2.imshow("mask", f) 
-  
-    if cv2.waitKey(1) & 0xFF == ord('Esc'):
+     if cv2.waitKey(1) & 0xFF == ord('Esc'):
         break 
   
 video.release() 
